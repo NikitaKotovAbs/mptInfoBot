@@ -5,6 +5,7 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMar
 keyboard_reply = ReplyKeyboardMarkup(keyboard=[
     [KeyboardButton(text='Расписание')],
     [KeyboardButton(text='Посмотреть замены')],
+    [KeyboardButton(text='Определение текущей недели')],
     [KeyboardButton(text='Расписание экзаменов')]
 ],
     resize_keyboard=True,

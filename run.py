@@ -4,7 +4,7 @@ import asyncio
 from aiogram import Bot, Dispatcher
 from aiogram.types import message
 
-from app.handlers import start, schedule_view, show_replacements, exam_schedule
+from app.handlers import start, schedule_view, show_replacements, exam_schedule, week_type
 from config import TOKEN
 from app.get_schedule_replacements import schedule_updates
 
@@ -16,6 +16,7 @@ async def main():
     dp.include_router(schedule_view.router)
     dp.include_router(show_replacements.router)
     dp.include_router(exam_schedule.router)
+    dp.include_router(week_type.router)
     # Запускаем периодическое обновление расписания
     asyncio.create_task(schedule_updates(bot))  # Запуск обновлений расписания
 
